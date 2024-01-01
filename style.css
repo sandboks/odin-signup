@@ -1,0 +1,33 @@
+body {
+    font-family: Roboto, sans-serif;
+
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.leftColumn {
+    display: flex;
+    flex-grow: 2;
+
+    justify-content: center;
+    align-items: center;
+    gap: 0px 48px;
+
+    padding: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+
+    background-color: #eaeaea;
+}
+
+.formInput {
+    background-color: white;
+}
