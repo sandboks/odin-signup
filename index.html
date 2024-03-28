@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Signup</title>
 
-    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -19,16 +18,11 @@
         </div>
         <div class="formInput">
             <p>Account Registration</p>
-            <div class="formInputGrid">
                 <form action="https://httpbin.org/post" method="post">
+                    <div class="formInputGrid">
                     <ul>
                         <li>
-                            <label for="first_name">First name:</label>
-                            <br>
-                            <input type="text" name="first_name" id="first_name">
-                        </li>
-                        <li>
-                            <label for="first_name">Last name:</label>
+                            <label for="first_name">Username:</label>
                             <br>
                             <input type="text" name="first_name" id="first_name">
                         </li>
@@ -37,38 +31,18 @@
                             <br>
                             <input type="text" name="first_name" id="first_name">
                         </li>
-                        <li>
-                            <label for="first_name">Phone number:</label>
-                            <br>
-                            <input type="text" name="first_name" id="first_name">
-                        </li>
                     </ul>
 
-                    <fieldset>
-                        <legend>What would you like to drink?</legend>
-                      
-                        <div>
-                            <input type="checkbox" id="programmer" name="programmer">
-                            <label for="programmer">Programmer</label>
-                        </div>
-                      
-                        <div>
-                            <input type="checkbox" id="artist" name="artist">
-                            <label for="artist">Artist</label>
-                        </div>
-                      </fieldset>
-
-                    <div>
-                        <input type="checkbox" id="newsletter" name="news_letter">
-                        <label for="newsletter">I agree to Odin Signup's policies outlined in the Terms of Service and Code of Conduct.</label>
-                      </div>
-
-                    <button type="submit">Submit</button>
+                </div>
                 </form>
-            </div>
         </div>
         <div class="submitSection">
-            <p>I agree to Odin Signup's policies outlined in the Terms of Service and Code of Conduct.</p>
+
+            <div>
+                <input type="checkbox" id="newsletter" name="news_letter">
+                <label for="newsletter">I agree to Odin Signup's policies, as outlined in the Terms of Service and Code of Conduct.</label>
+            </div>
+            <button type="submit">Submit</button>
         </div>
     </div>
 </body>

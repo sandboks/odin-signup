@@ -2,14 +2,22 @@ body {
     font-family: Roboto, sans-serif;
 
     height: 100vh;
-    display:flex;
+    display: flex;
     flex-direction: row;
     margin: 0px;
+}
+
+
+
+@font-face {
+  font-family:'norse-bold-font';
+  src: url('Norse-Bold.otf');
 }
 
 .leftColumn {
     display: flex;
     flex-grow: 2;
+    flex: 2 1 0;
 
     justify-content: center;
     align-items: center;
@@ -18,6 +26,11 @@ body {
     padding: 40px;
     align-items: flex-start;
     justify-content: center;
+
+    font-family: 'norse-bold-font';
+    font-size: 72px;
+
+    background-color: lightblue;
 }
 
 .rightColumn {
@@ -31,6 +44,17 @@ body {
 .formInput {
     background-color: white;
     padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.formInputGrid {
+  background-color: gray;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 form {
