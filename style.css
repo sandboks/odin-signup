@@ -14,6 +14,16 @@ body {
   src: url('Norse-Bold.otf');
 }
 
+@font-face {
+  font-family:'arcade';
+  src: url('arcade.regular.ttf');
+}
+
+@font-face {
+  font-family:'droid';
+  src: url('disposabledroid-bb.bold.ttf');
+}
+
 .leftColumn {
     display: flex;
     /*
@@ -26,14 +36,37 @@ body {
     align-items: center;
     gap: 0px 48px;
 
-    padding: 40px;
     align-items: flex-start;
     justify-content: center;
 
+    /*
     font-family: 'norse-bold-font';
-    font-size: 72px;
+    */
 
-    background-color: lightblue;
+    background-image: url("pixelsky.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.leftColumn h1 {
+    font-family: 'arcade';
+    font-size: 72px;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 0.2em;
+}
+
+.titleBanner {
+  position: absolute;
+  top: 20%;
+  
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  width: 100%
 }
 
 .rightColumn {
@@ -43,6 +76,7 @@ body {
     flex-grow: 3;
     */
     width: 60vw;
+    justify-content: center;
     
 
     background-color: #eaeaea;
