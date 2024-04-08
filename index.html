@@ -6,6 +6,7 @@
     <title>Odin Signup</title>
 
     <link rel="stylesheet" href="./style.css">
+    <script src="validation.js" defer></script>
 </head>
 <body>
     <div class="leftColumn">
@@ -18,45 +19,55 @@
             <h2>Join us today!</h2>
                 <form action="https://httpbin.org/post" method="post">
                     <div class="formInputGrid">
-                    <ul>
-                        <li>
-                            <label for="first_name">Username:</label>
-                            <br>
-                            <input type="text" name="first_name" id="first_name">
-                        </li>
-                        <li>
-                            <label for="first_name">Email:</label>
-                            <br>
-                            <input type="text" name="first_name" id="first_name">
-                        </li>
-                        <li>
-                            <label for="first_name">Password:</label>
-                            <br>
-                            <input type="text" name="first_name" id="first_name">
-                        </li>
-                        <li>
-                            <input type="checkbox" id="role1" name="vehicle3" value="Boat">
-                            <label for="role1">Designer</label><br>
-                            <input type="checkbox" id="role2" name="vehicle3" value="Boat">
-                            <label for="vehicle3">Illustrator</label><br>
-                            <input type="checkbox" id="role3" name="vehicle1" value="Bike">
-                            <label for="vehicle1">3D Artist</label><br>
-                            <input type="checkbox" id="role4" name="vehicle2" value="Car">
-                            <label for="vehicle2">Programmer</label><br>
-                            <input type="checkbox" id="role5" name="vehicle3" value="Boat">
-                            <label for="vehicle3">Writer</label><br>
-                        </li>
-                    </ul>
-
+                        <ul>
+                            <li>
+                                <label for="first_name">Username:</label>
+                                <br>
+                                <input type="text" name="first_name" id="first_name" minlength="3" required>
+                                <p>Please enter a username</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <label for="email">Email</label>
+                                </div>
+                                <input type="email" id="email" name="email" required>
+                                <p>Please enter a valid email address</p>
+                            </li>
+                            <li>
+                                <label for="user_password">Password:</label>
+                                <br>
+                                <input type="password" id="user_password1" name="password" required>
+                                <p>Please enter a password</p>
+                            </li>
+                            <li>
+                                <label for="user_passwordConfirm">Confirm password:</label>
+                                <br>
+                                <input type="password" id="user_password2" name="passwordConfirm" required>
+                                <p>Passwords do not match</p>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="role1" name="vehicle3" value="Boat">
+                                <label for="role1">Designer</label><br>
+                                <input type="checkbox" id="role2" name="vehicle3" value="Boat">
+                                <label for="vehicle3">Illustrator</label><br>
+                                <input type="checkbox" id="role3" name="vehicle1" value="Bike">
+                                <label for="vehicle1">3D Artist</label><br>
+                                <input type="checkbox" id="role4" name="vehicle2" value="Car">
+                                <label for="vehicle2">Programmer</label><br>
+                                <input type="checkbox" id="role5" name="vehicle3" value="Boat">
+                                <label for="vehicle3">Writer</label><br>
+                            </li>
+                        </ul>
                     <div>
                         <input type="checkbox" id="newsletter" name="news_letter">
                         <label for="newsletter">I agree to Odin Signup's policies, as outlined in the Terms of Service and Code of Conduct.</label>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submitButton">Submit</button>
                 </div>
                 </form>
         </div>
         <div class="submitSection">
+            <button id="testButton">test</button>
 
             
         </div>

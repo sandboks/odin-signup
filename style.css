@@ -7,6 +7,18 @@ body {
     margin: 0px;
 }
 
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+  border-color: green;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: red;
+}
+
 
 
 @font-face {
@@ -43,7 +55,7 @@ body {
     font-family: 'norse-bold-font';
     */
 
-    background-image: url("pixelsky.jpg");
+    background-image: url("pixelsky.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,6 +69,7 @@ body {
     text-align: center;
     font-weight: normal;
     margin: 0;
+    padding: 0 0.5em;
     padding-top: 0.2em;
 }
 
@@ -97,6 +110,13 @@ body {
   gap: 24px;
 }
 
+.formInputGrid p {
+  color: red;
+  font-size: small;
+  position: absolute;
+  margin: 0;
+}
+
 form {
     /* Center the form on the page 
     margin: 0 auto;
@@ -114,7 +134,8 @@ form {
   }
   
   form li + li {
-    margin-top: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
   }
   
   label {
