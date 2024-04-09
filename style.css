@@ -110,7 +110,7 @@ textarea:user-invalid {
   gap: 24px;
 }
 
-.formInputGrid p {
+.errorMessage {
   color: red;
   font-size: small;
   position: absolute;
@@ -126,6 +126,34 @@ form {
     border: 1px solid #ccc;
     border-radius: 1em;
   }
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.tickPlaceholder {
+  width: 1.25em;
+  padding: 0px;
+  margin: 0px;
+}
+
+.tickPlaceholder p {
+  margin: 0px;
+  color: green;
+
+  font-family: monospace;
+}
+
+.inputRow h3 {
+  margin: 0px;
+  padding: 0px;
+  height: 1em;
+
+  color: green;
+}
   
   ul {
     list-style: none;
