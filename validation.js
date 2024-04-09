@@ -1,6 +1,6 @@
 var p2attempted = false;
 
-var submitButton = document.querySelector("#testButton");
+var submitButton = document.querySelector("#submitButton");
 submitButton.addEventListener("click",  () => {
     ValidatePasswords();
 });
@@ -53,8 +53,8 @@ function ValidatePasswords() {
 
     //p1field.setCustomValidity((match ? "" : "mismatch"));
     if (p2attempted) {
-        p2field.setCustomValidity((match ? "" : "mismatch"));
-        tickboxes[3].textContent = match ? "✔" : "☐";
+        p2field.setCustomValidity((match ? "" : "password mismatch"));
+        tickboxes[3].textContent = match && (p2.length > 0) ? "✔" : "☐";
         errorFields[3].textContent = match ? "" : errorMessages[3];
     }
 
