@@ -15,10 +15,20 @@
         </div>
     </div>
     <div class="rightColumn">
-        <div class="formInput">
-            <h2>Join us today!</h2>
-                <form action="https://httpbin.org/post" method="post">
+        <form action="https://httpbin.org/post" method="post">
+            <div class="topIntro">
+                <p>A community for game developers. Connect with creative people around the world, share what you're working on, and make some cool games!</p>
+            </div>
+            <div class="formInput">
+                <h2>Join us today!</h2>
                     <div class="formInputGrid">
+                        <!--
+                        <input type="email" name="email" id="signEmail" placeholder="Email">
+                        <input type="text" name="name" id="signName" placeholder="Username">
+                        <input type="password" name="password" id="signPassword" placeholder="Password"><br>
+                        <input type="submit" value="Submit">
+                        -->
+                        
                         <div>
                             <div class="inputRow">
                                 <div class="tickPlaceholder">
@@ -59,32 +69,35 @@
                             <input type="password" id="user_password2" name="passwordConfirm" required>
                             <p class="errorMessage"></p>
                         </div>
-                        <br>
+                        <!--
                         <div>
                             <label>Roles: (choose all that apply)</label>
                             <ul>
                                 <li>
                                     <input type="checkbox" id="role1" name="vehicle3" value="Boat">
-                                    <label for="role1">Designer</label><br>
+                                    <label for="role1">💭 Designer</label><br>
                                     <input type="checkbox" id="role2" name="vehicle3" value="a">
-                                    <label for="role2">Illustrator</label><br>
+                                    <label for="role2">✏️ Illustrator</label><br>
                                     <input type="checkbox" id="role3" name="vehicle1" value="Bike">
-                                    <label for="vehicle1">3D Artist</label><br>
+                                    <label for="vehicle1">🧊 3D Artist</label><br>
                                     <input type="checkbox" id="role4" name="vehicle2" value="Car">
-                                    <label for="vehicle2">Programmer</label><br>
+                                    <label for="vehicle2">⌨️ Programmer</label><br>
                                     <input type="checkbox" id="role5" name="vehicle3" value="Boat">
-                                    <label for="vehicle3">Writer</label><br>
+                                    <label for="vehicle3">📝 Writer</label><br>
                                 </li>
                             </ul>
                         </div>
+                        -->
                         <div>
                             <input type="checkbox" id="newsletter" name="news_letter">
-                            <label for="newsletter">I agree to Gamedev Network's policies, as outlined in the Terms of Service and Code of Conduct.</label>
+                            <label for="newsletter">I agree to Gamedev Network's Code of Conduct.</label>
                         </div>
-                        <button type="submit" id="submitButton">Submit</button>
-                    </div>
-                </form>
+            </div>
         </div>
+        <div class="rightBottom">
+            <button type="submit" id="submitButton">Create Account</button>
+        </div>
+        </form>
     </div>
 </body>
 </html>
