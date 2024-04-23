@@ -2,6 +2,8 @@ var p2attempted = false;
 
 var submitButton = document.querySelector("#submitButton");
 
+var form = document.querySelector('#signupForm');
+
 var userfield = document.querySelector("#username");
 var emailfield = document.querySelector("#email");
 var p1field = document.querySelector("#user_password1");
@@ -69,5 +71,10 @@ function ValidatePasswords() {
     return (match && p1.length > 0);
 }
 
-//let submitButton = document.querySelector("#submitButton");
+// have the submit button greyed out by default
 ValidateForm();
+
+form.addEventListener('submit', function(event)
+{
+    window.open('https://www.youtube.com/watch?v=QFBz0B4osKQ', '_blank');
+});
