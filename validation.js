@@ -28,11 +28,11 @@ emailfield.addEventListener("input", () => {
     ValidateForm();
 });
 p1field.addEventListener("blur", () => {
-    //ValidatePasswords();
+    ValidatePasswords();
     ValidateForm();
 });
 p2field.addEventListener("blur", () => {
-    //ValidatePasswords();
+    ValidatePasswords();
     ValidateForm();
 });
 p2field.addEventListener("focus", () => {
@@ -66,7 +66,7 @@ function ValidatePasswords() {
         errorFields[3].textContent = match ? "" : errorMessages[3];
     }
     
-    return (match);
+    return (match && p1.length > 0);
 }
 
 //let submitButton = document.querySelector("#submitButton");
