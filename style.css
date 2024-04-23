@@ -5,20 +5,6 @@ body {
     margin: 0px;
 }
 
-/*
-input:user-valid,
-select:user-valid,
-textarea:user-valid {
-  border-color: green;
-}
-
-input:user-invalid,
-select:user-invalid,
-textarea:user-invalid {
-  border-color: red;
-}
-*/
-
 
 
 @font-face {
@@ -59,11 +45,8 @@ input, select {
     overflow: hidden;
 
     justify-content: center;
-    align-items: center;
+    align-items: end;
     gap: 0px 48px;
-
-    align-items: flex-start;
-    justify-content: center;
 
     /*
     font-family: 'norse-bold-font';
@@ -96,6 +79,10 @@ input, select {
   width: 100%
 }
 
+.artCredit {
+  color: white;
+}
+
 /*
 
 // <uniquifier>: Use a unique and descriptive class name
@@ -116,18 +103,21 @@ input, select {
 
 .rightColumn {
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     /*
     flex-direction: column;
     flex-grow: 3;
     */
     width: 60vw;
+    height: 100vh;
+    overflow: overlay;
     
 
     background-color: #f3f3f3;
+}
 
-    font-family: "pixelifySans";
+.rightColumn h2 {
+  /*font-family: "pixelifySans";*/
 }
 
 .rightColumnContents {
@@ -135,8 +125,12 @@ input, select {
 }
 
 .topIntro, .formInput, .rightBottom {
-
   padding: 2em;
+}
+
+.topIntro {
+  font-size: 1.5em;
+  padding-bottom: 0;
 }
 
 .formInput {
@@ -199,7 +193,7 @@ form li + li {
   margin-bottom: 2em;
 }
 
-.rightBottom button {
+button {
   padding: 12px;
   border-radius: 0.5em;
   border: 0px;
@@ -210,5 +204,10 @@ form li + li {
   
   color: white;
   background-color: rgb(75, 132, 255);
+}
+
+.buttonOff {
+  color: white;
+  background-color: rgb(173, 173, 173);
 }
   

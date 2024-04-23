@@ -1,14 +1,12 @@
 var p2attempted = false;
 
 var submitButton = document.querySelector("#submitButton");
-submitButton.addEventListener("click",  () => {
-    ValidatePasswords();
-});
 
 var userfield = document.querySelector("#username");
 var emailfield = document.querySelector("#email");
 var p1field = document.querySelector("#user_password1");
 var p2field = document.querySelector("#user_password2");
+var agreeField = document.querySelector("#codeOfConduct");
 
 var tickboxes = document.querySelectorAll("#checkbox");
 var errorFields = document.querySelectorAll(".errorMessage");
@@ -21,23 +19,33 @@ var errorMessages = [
     "Passwords do not match"
 ]
 
-
-userfield.addEventListener("blur", () => {
+userfield.addEventListener("input", () => {
     tickboxes[0].textContent = userfield.checkValidity() ? "✔" : "☐";
+    ValidateForm();
 });
-emailfield.addEventListener("blur", () => {
+emailfield.addEventListener("input", () => {
     tickboxes[1].textContent = emailfield.checkValidity() ? "✔" : "☐";
+    ValidateForm();
 });
 p1field.addEventListener("blur", () => {
-    ValidatePasswords();
+    //ValidatePasswords();
+    ValidateForm();
 });
 p2field.addEventListener("blur", () => {
-    ValidatePasswords();
+    //ValidatePasswords();
+    ValidateForm();
 });
-
 p2field.addEventListener("focus", () => {
     p2attempted = true;
 });
+agreeField.addEventListener("input", () => {
+    ValidateForm();
+});
+
+function ValidateForm() {
+    var valid = (userfield.checkValidity() && emailfield.checkValidity() && ValidatePasswords() && agreeField.checked);
+    submitButton.className = (valid ? "" : "buttonOff");
+}
 
 function ValidatePasswords() {
     var match = false;
@@ -57,13 +65,9 @@ function ValidatePasswords() {
         tickboxes[3].textContent = match && (p2.length > 0) ? "✔" : "☐";
         errorFields[3].textContent = match ? "" : errorMessages[3];
     }
-
-    if (!(match)) {
-        //alert("passwords don't match");
-        //p1field.setCustomValidity("Passwords must match!");
-    }
-
-
     
     return (match);
 }
+
+//let submitButton = document.querySelector("#submitButton");
+ValidateForm();
