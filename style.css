@@ -101,6 +101,10 @@ input, select {
   src: url('PixelifySans-VariableFont.ttf');
 }
 
+a {
+  color: inherit;
+}
+
 .rightColumn {
     display: flex;
     justify-content: center;
